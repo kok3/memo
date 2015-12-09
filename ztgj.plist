@@ -11,13 +11,13 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://download.wqn.ztgame.com.cn/ProductName1.ipa</string>
+					<string>http://222.73.243.62/ztgj/ztgj.ipa</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.hy.wuqiannian</string>
+				<string>com.ztgame.fir.ztgj</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
