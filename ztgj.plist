@@ -13,6 +13,14 @@
 					<key>url</key>
 					<string>http://222.73.243.62/ztgj/ztgj.ipa</string>
 				</dict>
+				<dict>
+                    <key>kind</key>
+                    <string>display-image</string>
+                    <key>needs-shine</key>
+                    <true />
+                    <key>url</key>
+                    <string>https://222.73.243.62/download/ztapp.png</string>
+                 </dict>
 			</array>
 			<key>metadata</key>
 			<dict>
