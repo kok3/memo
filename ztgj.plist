@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://222.73.243.62/ztgj/ztgj.ipa</string>
+					<string>http://222.73.243.62/ztgj/wai_patch_ios/ztgjr-1.28.0.0.ipa</string>
 				</dict>
 				<dict>
                     <key>kind</key>
@@ -25,13 +25,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.ztgame.fir.ztgjtest</string>
+				<string>com.ztgame.fir.ztgj</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>征途挂机</string>
+				<string>江湖online</string>
 			</dict>
 		</dict>
 	</array>
