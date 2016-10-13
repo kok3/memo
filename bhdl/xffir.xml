@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<server ip="222.73.192.136" port="7100"/>
+	<!--server ip="222.73.30.241" port="7100"/-->
+	<crashreport baseUrl="http://192.168.181.14/quincy/"/>
+	<!-- 版本号-->
+	<clientver verid="1.16.0.0"/>
+	<gamemodel type="normal"/>
+	<xinyue type="ok"/>
+	<paymodel type="ok"/>
+	<map var="zone" key="id" >
+		<!--zone id="4" name="国际版" noticeid="2" state="1" statenew="1"/-->
+		<zone id="3" name="封测区" noticeid="2" state="1" statenew="1"/>
+ 	</map>
+    
+	<map var="servers" key="id" >
+		<server id="1" ip="222.73.192.136" port="7100"/>
+		<!--server id="1" ip="222.73.30.241" port="7100"/-->
+	</map>
+	<reconn interval="1" maxcount="5" disconn_interval="5" />
+	<map var="url" key="name">
+		<!--url name="HttpURL" link="http://222.73.243.62/ztgjxf/" /-->
+		<!--url name="HttpURL" link="http://zz.ztgame.com/m/ios/" /-->
+		<url name="HttpURL" link="http://zz.ztgame.com/m/xiazai/" />
+		<!--url name="HttpURL" link="http://act.zt.ztgame.com/guaji/" /-->
+
+		<!--IOS补丁包下载目录-->
+		<!--url name="UpdateResURL_ios" link="http://222.73.192.24/ztgjios/fir/ztgjResources/" /-->
+		<url name="UpdateResURL_ios" link="https://raw.githubusercontent.com/kok3/memo/master/bhdl/" />
+		<!--安卓补丁包下载目录-->
+		<!--url name="UpdateResURL_android" link="http://222.73.192.24/ztgjandroid/fir/ztgjResources/" /-->
+		<url name="UpdateResURL_android" link="http://222.73.243.62/ztgjxf/xf_patch_android/" />
+		
+		<!--IOS补丁文件列表-->
+		<!--url name="FlistURL_ios" link="http://222.73.192.24/ztgjios/fir/ztgjResources/flist.dat" /-->
+		<url name="FlistURL_ios" link="https://raw.githubusercontent.com/kok3/memo/master/bhdl/version.xml" />
+		<!--安卓补丁文件列表-->
+		<!--url name="FlistURL_android" link="http://222.73.192.24/ztgjandroid/fir/ztgjResources/flist.dat" /-->
+		<url name="FlistURL_android" link="http://222.73.243.62/ztgjxf/xf_patch_android/version.xml" />
+		
+		<url name="HowToPlay" link="http://222.73.192.24/ztgjios/adderResources/" />
+		<url name="Noticement" link="http://gj.ztgame.com/p2p/update.html" />
+		<url name="FAQ" link="http://222.73.192.24/ztgjios/adderResources/" />
+		<url name="RegisteURL" link="http://192.168.181.14/reg_account/reg.php/reg?"/>
+		<url name="APP_ICON" link="http://222.73.192.24/ztgjios/ztgjResources/icon128.png"/>
+	</map>
+</config>
