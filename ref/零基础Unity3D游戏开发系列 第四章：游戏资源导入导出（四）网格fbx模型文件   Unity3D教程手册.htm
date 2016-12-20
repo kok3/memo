@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0036)http://www.unitymanual.com/7002.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- Mirrored from www.unitymanual.com/7002.html by HTTrack Website Copier/3.x [XR&CO'2013], Tue, 30 Jul 2013 12:13:42 GMT --><!-- Added by HTTrack --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- /Added by HTTrack -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件 | Unity3D教程手册</title> 
+<meta name="description" content="所有3D游戏的核心都是网格--由三角面片组成的、并附有贴图的物体。">
+<meta name="keywords" content="Unity3D教程,Unity3D游戏开发,游戏资源导入导出,网格fbx模型文件">
+<link rel="stylesheet" type="text/css" href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/style.css">
+<link rel="stylesheet" type="text/css" href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/add.css">
+<link rel="alternate" type="application/rss+xml" title="Unity3D教程手册 RSS Feed" href="http://www.unitymanual.com/feed">
+<link rel="alternate" type="application/atom+xml" title="Unity3D教程手册 Atom Feed" href="http://www.unitymanual.com/feed/atom">
+<link rel="pingback" href="http://www.unitymanual.com/xmlrpc.php">
+<link rel="shortcut icon" href="http://www.unitymanual.com/wp-content/themes/unitymanual/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://www.unitymanual.com/wp-content/themes/unitymanual/images/pirobox/style.css">
+<link rel="stylesheet" type="text/css" 　media="screen and (max-device-width: 400px)" href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/mobile.css">
+<link rel="alternate" type="application/rss+xml" title="Unity3D教程手册 » 零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件 评论 Feed" href="http://www.unitymanual.com/7002.html/feed">
+<link rel="stylesheet" id="wp-polls-css" href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/polls-css.css" type="text/css" media="all">
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/jquery.js"></script>
+<script language="JavaScript"><!--
+ var DevFmtUrl='http://www.unitymanual.com/wp-content/plugins/devformatter/'; var DevFmtAjaxUrl = 'http://www.unitymanual.com/wp-admin/admin-ajax.php'; //-->
+</script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/devfmt_common.js"></script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/devfmt_public.js"></script>
+<style type="text/css" media="screen"> @import url( 'http://www.unitymanual.com/wp-content/plugins/devformatter/devfmt_reset.css?ver=2013.0.1.41' ); </style>
+<style type="text/css" media="screen"> @import url( 'http://www.unitymanual.com/wp-content/plugins/devformatter/devfmt_css.php?ver=2013.0.1.41' ); </style><style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 8px;
+	line-height: 10px;
+	height: 10px;
+	background-image: url('http://www.unitymanual.com/wp-content/plugins/wp-polls/images/default_gradient/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+</style>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/comments-ajax.js"></script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/realgravatar.js"></script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/hoveraccordion.js"></script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/tearsnow.js"></script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/lazyload.js"></script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/jquery.min.js"></script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/pirobox.min.js"></script>
+<script type="text/javascript">   
+$(document).ready(function() {   
+    $().piroBox({   
+            my_speed: 400, //animation speed   
+            bg_alpha: 0.3, //background opacity   
+            slideShow : true, // true == slideshow on, false == slideshow off   
+            slideSpeed : 4, //slideshow duration in seconds(3 to 6 Recommended)   
+            close_all : '.piro_close,.piro_overlay'// add class .piro_overlay(with comma)if you want overlay click close piroBox   
+    });   
+});   
+</script>
+</head>
+
+<body>
+<div id="topbar">
+  <div class="w1000 clearfix"><a class="homeicon" href="http://www.unitymanual.com/"></a>
+    <!--顶部导航-->
+	<div class="menu-nav-container"><ul id="menu-nav" class="menu"><li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4"><a href="http://www.unitymanual.com/">首页</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a title="Unity3D资讯" href="http://www.unitymanual.com/category/news">Unity3D资讯</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9"><a title="Unity3D脚本/插件" href="http://www.unitymanual.com/category/script">Unity3D脚本/插件</a></li>
+<li id="menu-item-335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-335"><a title="免费Unity3D教程" href="http://www.unitymanual.com/category/manual">免费Unity3D教程</a></li>
+<li id="menu-item-2853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2853"><a title="Unity3D维基百科" href="http://www.unitymanual.com/wiki/">Unity3D维基百科</a></li>
+<li id="menu-item-1048" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1048"><a title="Unity3D培训课" href="http://www.unitymanual.com/category/unity3d_class">Unity3D培训课</a></li>
+<li id="menu-item-1092" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1092"><a href="http://www.unitymanual.com/post/class/index.html">公开课报名入口</a></li>
+<li id="menu-item-3225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3225"><a title="Unity3D论坛" href="http://www.unitymanual.com/bbs/">Unity3D论坛</a></li>
+</ul></div>    <span class="hot"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/hot.gif"></span>
+    <div style="display:none"><a target="_blank" href="http://www.unitymanual.com/qa/">Unity问答</a></div>
+  </div>
+</div>
+
+<div class="mNav">
+	<div class="clearfix"><a class="homeicon" href="http://www.unitymanual.com/"></a>
+    <!--顶部导航-->
+    <div class="mBox">
+        <a target="_blank" href="http://www.unitymanual.com/">首页</a> -
+        <a target="_blank" href="http://www.unitymanual.com/category/news">Unity3D资讯</a> -
+        <a target="_blank" href="http://www.unitymanual.com/category/script">Unity3D脚本/插件</a>
+        <a class="mMore" target="_blank" href="http://www.unitymanual.com/7002.html#">More</a>
+        <ul class="mNavMore">
+            <li><a target="_blank" href="http://www.unitymanual.com/http://www.unitymanual.com/forum-tutorials-1.html">零基础Unity3D游戏开发系列</a></li>
+        </ul>
+   </div> 
+  </div>
+  <script type="text/javascript">
+		$(document).ready(function(){
+			$(".mMore").mousedown(function(){
+  $(".mNavMore").slideToggle();
+});
+
+
+		}); 
+  </script>
+</div>
+<div id="layout">
+    <div id="header">
+<a class="fl logo" href="http://www.unitymanual.com/" title="Unity3D教程手册 - Unity3D培训|中国第一免费Unity3D教程手册"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/logo.gif" alt="Unity3D教程手册"></a>
+  <img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/wx.jpg" class="fr wx" title="扫一扫,关注我们的微信！">
+  <div id="sns">
+    <div id="rss">
+      <ul>
+        <li class="rssfeed"><a href="http://www.unitymanual.com/feed" target="_blank" class="icon1" title="欢迎订阅RSS源"></a></li>
+                <li class="tqq"><a href="http://t.qq.com/unity3d_manual" target="_blank" class="icon2" title="我的腾讯微博"></a></li>
+                                <li class="tsina"><a href="http://weibo.com/unitymanual" target="_blank" class="icon3" title="我的新浪微博"></a></li>
+                              </ul>
+    </div>
+    <div id="sear">
+      <div class="search">
+        <form id="searchform" method="get" action="http://www.unitymanual.com/search.php">
+          <input type="text" value="" name="q" id="q" size="30" onblur="if (this.value == &#39;&#39;) {this.value = &#39;&#39;;}" placeholder="Keywords...">
+          <input type="hidden" value="UTF-8" name="ie">
+         <input type="submit" id="searchsubmit" class="icon" value="搜 索">
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<div id="breadcrumbs" class="clearfix">当前位置 : <a href="http://www.unitymanual.com/" title="Unity3D教程手册">Unity3D教程手册</a> » <a href="http://www.unitymanual.com/http://www.unitymanual.com/forum-tutorials-1.html" title="查看 零基础Unity3D游戏开发系列 中的全部文章">零基础Unity3D游戏开发系列</a> » 零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件</div></div>
+
+
+<div id="roll">
+  <div title="回到顶部" id="roll_top"></div>
+  <div title="查看评论" id="ct"></div>
+  <div title="转到底部" id="fall"></div>
+</div>
+<div id="content" class="clearfix">
+  <div class="main">
+        <div class="left">
+        <h1>
+          零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件        </h1>
+        <small class="time">Posted on
+        2013年07月01日        by
+        U3d        /
+        <a href="http://www.unitymanual.com/http://www.unitymanual.com/forum-tutorials-1.html" title="查看 零基础Unity3D游戏开发系列 中的全部文章" rel="category tag">零基础Unity3D游戏开发系列</a>        /被围观
+         229 次        </small>
+        <div class="context">
+                    <p>所有3D游戏的核心都是网格--由三角面片组成的、并附有贴图的物体。</p>
+<p>1.3D建模软件如3D max maya。制作模型。</p>
+<p>2.将制作好的模型保存在“Assets”【资源】文件夹下。</p>
+<p>3.将模型放入场景。</p>
+<div id="attachment_7003" class="wp-caption aligncenter" style="width: 413px"><a href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/11.jpg" class="pirobox_gall"><img class="size-full wp-image-7003" alt="零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（三）网格fbx模型文件" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/11.jpg" width="403" height="375"></a><p class="wp-caption-text">零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件</p></div>
+<p>4.调整属性参数。</p>
+<p>Unity中用渲染器（renderer）组件负责渲染网格。渲染器组件有很多变种，其中网格渲染器是最常用的一种。</p>
+<div id="attachment_7004" class="wp-caption aligncenter" style="width: 284px"><a href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/21.jpg" class="pirobox_gall"><img class="size-full wp-image-7004" alt="零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/21.jpg" width="274" height="660"></a><p class="wp-caption-text">零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件</p></div>
+<p>5.安装fbx插件。在3D MAX中，点击File【文件】--&gt;Export【导出】，将模型文件导出为FBX文件，保存到我们创建的文件夹中的“Assets”【资源】文件夹下面。注意一下弹出的“FBX Export”面板，这里包含了模型动画、骨骼工具、材质等等一系列的导出设置。如果您没有在模型中添加这些东西，就需要将不必要的复选框勾选掉。</p>
+<p>Unity3D 中，导出带动画的资源有2种导出方式可以选择：</p>
+<p>1）导出资源时，只导出一个文件，保留模型，骨骼和所有的动作帧（把所有的动作，比如idle，attack，hit等等全部做成一个长动画），导出之后，放入unity3d，在project 窗口中选中FBX文件，在Inspector 窗口中，找到Split Animations选项，在该子选项下，拆分整个长动作为数个子动作。</p>
+<p>优点：操作简单，美术操作起来不易出错。</p>
+<p>缺点：不灵活，单个资源太大，更新，修改，和加载都是问题</p>
+<p>2）导出的资源是分成模型，和多个动作的文件。一个FBX是模型，其他的是动作文件。导出模型时候，删除所有的动画，注意，是删除所有的动画哦，连T-POS都要删掉，然后导出成一个FBX文件。这个FBX就是模型资源。然后同样的max资源，把其中的模型删除，保留骨骼和其中某一段动作，比如idle的30帧，删除其他的动作帧，然后再导出成一个FBX，这个FBX就是该骨骼的一个动作。</p>
+<p>优点：组合方式灵活，单个资源控制到很小，加载，更新，修改的代价都很小。</p>
+<p>缺点：导出操作复杂，美术操作易出错</p>
+<p><strong>设置</strong></p>
+<p>1.Bake Animation</p>
+<p>Bake Animation 要勾选上</p>
+<p>2.Curve Filters 勾选上</p>
+<p>3.Constant Key Reducer 勾选上</p>
+<p>真人动作捕捉时，勾选之后优化尤为明显。</p>
+<p>4.Cameras 不勾选</p>
+<p>5.Light 不勾选</p>
+<p>6.要导出贴图和材质，需要勾选Embed Media</p>
+<p>Tips:</p>
+<p>3dmax 资源导出</p>
+<p>确认一下系统的使用单位，选择 Customize &gt; Units Setup &gt; Metric &gt; Meters，按下OK键确认。Unity能识别大多数3D软件的专属格式并加以转换，我们也可直接将3ds Max(max档案)或是Maya(ma或是mb档案)　制作好的模型储存到 Assets 目录里面， Unity就能自动将模型转换成FBX格式。</p>
+<p>无法导入灯光,使用光照贴图实现。</p>
+<p>网格的外观由渲染器中的材质决定。</p>
+<p><strong>查找纹理</strong></p>
+<p>Unity会根据下述寻找贴图的方案来尝试自动的导入与网格相关的贴图。首先，贴图导入器会寻找与网格在同级或上级文件夹下的Textures子文件夹。如果这样的查找失败了，导入器将会对项目中所有的贴图进行穷举搜索。穷举搜索较慢，并且如果当有两个或多个同名的贴图时，穷举搜索不能保证能找到正确的贴图，这是穷举搜索最主要的缺点。</p>
+<div id="attachment_7005" class="wp-caption aligncenter" style="width: 466px"><a href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/31.jpg" class="pirobox_gall"><img class="size-full wp-image-7005" alt="零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/31.jpg" width="456" height="324"></a><p class="wp-caption-text">零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件</p></div>
+<p>建议把纹理放到与资源文件同级或上级的Textures文件夹中。</p>
+<p><strong>网格属性</strong></p>
+<p>当网格被选中时，网格的导入设置会显示在检视面板中。</p>
+<div id="attachment_7006" class="wp-caption aligncenter" style="width: 284px"><a href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/4.jpg" class="pirobox_gall"><img class="size-full wp-image-7006" alt="零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/4.jpg" width="274" height="660"></a><p class="wp-caption-text">零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件</p></div>
+<p>·Scale Factor 缩放系数</p>
+<p>Unity的物理系统希望游戏世界中的1米为导入文件中的1单位。调整此参数可以塑造一个不同比例的模型</p>
+<p>·Use File Units 使用文件单位</p>
+<p>此选项仅适用于3dsMax文件。如果启用此选项，以1Max单位 = 1Unity单位导入3DSMAX文件，否则以1厘米= 1Unity单位导入</p>
+<p>·Mesh Compression网格压缩</p>
+<p>升高这值会降低网格的文件大小，但可能会导致谬误（模型走样变形）。最好是在与未经压缩网格的版本差异不会太大的前提下，将其设置得尽可能高。此选项对优化游戏的大小（optimizing game size）是有用的。</p>
+<p>·Mesh Optimization 网格优化</p>
+<p>此选项决定了以何种顺序将三角形排列在网格中</p>
+<p>·Generate Colliders产生碰撞体</p>
+<p>如果启用该选项，网格导入时会自动生成其网格碰撞体。这对快速生成一个环境几何体的碰撞网格是非常有用的，但应避免将其用在要移动的几何体上。</p>
+<p>·Swap UVs 交换UV</p>
+<p>当有光照贴图的物体的UV通道不正确时启用此选项。这将交换你的主UV通道与次UV通道。</p>
+<p>·Generate Lightmap UVs产生光照贴图UV</p>
+<p>启用此选项会为光照贴图创建第二个UV通道。</p>
+<p>· Advanced Options 高级选项</p>
+<p>参考unity文档中 Lightmapping UVs document.</p>
+<p><strong>　Normals &amp; Tangents法线和切线</strong></p>
+<p>·Normals 法线</p>
+<p>决定是否使用法线和如何计算法线。此选项对优化游戏的大小（optimizing game size）是有用的。</p>
+<p>Import 导入默认选项。从文件导入法线。</p>
+<p>Calculate 计算 根据平滑角度（Smoothing angle）计算法线。如果选中，启用平滑角度（Smoothing angle）。</p>
+<p>None 不使用 禁用法线。如果网格既没有法线贴图，也不受实时光照影响，则可使用此选项。</p>
+<p>·Tangents 切线</p>
+<p>决定是否使用切线和副法线及如何计算切线和副法线。此选项对优化游戏的大小（optimizing game size）是有用的。</p>
+<p>Import 导入 从文件导入切线和副法线。此选项仅适用于FBX，Maya和3DSMAX文件，并且只有当法线为从文件中导入时可用。</p>
+<p>Calculate 计算 默认选项。计算切线和副法线。只有当法线为导入或计算时，此选项可用。</p>
+<p>None 不使用 禁用切线和副法线。如网格没有切线则不能使用法线贴图着色器。</p>
+<p>·Smoothing Angle 平滑角</p>
+<p>设置边会被作为硬边处理的锋利程度。它还被用来切分法线贴图切线。</p>
+<p>·Split Tangents 分离切线</p>
+<p>如果您的网格上的接缝破坏了法线贴图光照，启用此选项。这通常只适用于角色。</p>
+<p><strong>Materials材质</strong></p>
+<p>·Import Materials 导入材质</p>
+<p>如果您不想Unity为您生成材质，禁用此选项。禁用此选项后，所有的材质都为默认的漫反射材质</p>
+<p>·Material Naming 材质命名</p>
+<p>此选项决定了Unity材质的命名方式</p>
+<p>·Material Search 材质搜索</p>
+<p>决定Unity如何根据材质命名选项中定义的名字查找已有的材质</p>
+<p>Local 本地</p>
+<p>Unity只会在本地的Materials文件夹中查找已有的材质，即，与模型文件在同一文件夹下的Materials子文件夹</p>
+<p>Recursive-Up 向上递归</p>
+<p>Unity会在所有的父文件夹中的Materials子文件夹中查找已有的材质</p>
+<p>Everywhere 所有地方</p>
+<p>Unity会在所有的项目文件夹下查找已有的材质</p>
+<p><strong>本文来自：Unity3D教程手册QQ群（290248177）作者：傻瓜（QQ：407316399）感谢分享！本文禁止转载！</strong></p>
+<p><strong>欢迎Unity3D爱好者踊跃分享你的学习心得，来稿请发至：noreply@unitymanual.com</strong></p>
+          <p>
+          </p><div>
+                                              </div>
+          <p></p>
+        </div>
+            </div>
+    <img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/code.jpg">
+    <div class="copyRight">
+      <p>* 版权声明：转载时请以超链接形式标明文章原始出处和作者信息</p>
+      <p>* 本文来自：<a href="http://www.unitymanual.com/">Unity3D 教程手册</a></p>
+      <p>* 本文链接：<a href="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册.htm" rel="bookmark" title="零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件">
+        http://www.unitymanual.com/7002.html        </a></p>
+    </div>
+    <div class="clearfix infoLike">
+      <div class="infoTags">
+        标签： <a href="http://www.unitymanual.com/tag/unity3d%E6%95%99%E7%A8%8B" rel="tag">Unity3D教程</a>  <a href="http://www.unitymanual.com/tag/unity3d%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" rel="tag">Unity3D游戏开发</a>  <a href="http://www.unitymanual.com/tag/%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA" rel="tag">游戏资源导入导出</a>  <a href="http://www.unitymanual.com/tag/%E7%BD%91%E6%A0%BCfbx%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6" rel="tag">网格fbx模型文件</a> 
+      </div>
+      <wb:publish action="http://www.unitymanual.com/pubilish" type="web" language="zh_cn" button_type="red" button_size="big" uid="3019570967" tag="unity3d" refer="y" appkey="5FCD0f"></wb:publish>
+    
+      
+      <!-- JiaThis Button BEGIN -->
+<div class="bdshare_t jiathis_style_32x32 clearfix">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_t163"></a>
+	<a class="jiathis_button_baidu"></a>
+	<a class="jiathis_button_douban"></a>
+	<a class="jiathis_button_hi"></a>
+	<a class="jiathis_button_gmail"></a>
+	<a class="jiathis_button_diandian"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<!-- JiaThis Button END -->
+    </div>
+    <div class="articles clearfix">
+      【上一篇】<a href="http://www.unitymanual.com/6999.html" rel="prev">设计移动App需要注意的10点</a>      <br>
+      【下一篇】<a href="http://www.unitymanual.com/7010.html" rel="next">从模型中抽取动画文件</a>    </div>
+    <div class="articles clearfix">
+      <div class="relatedposts">
+    <h3>您可能还会对这些文章感兴趣！</h3>
+    <script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/api.php"></script><div class="module cl xl xl1">
+<ul><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37121" title="unity3D模型插件资源 idol horn" target="_blank">unity3D模型插件资源 idol horn</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37120" title="unity3D模型插件资源 Big Smith" target="_blank">unity3D模型插件资源 Big Smith</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37119" title="unity3D模型Top-Down Apocalyptic World Volume 1 - Town" target="_blank">unity3D模型Top-Down Apocalyptic Wor</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37118" title="unity3D模型插件资源  Scarred Knight" target="_blank">unity3D模型插件资源  Scarred Knight</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37117" title="unity3D模型插件资源 MB1 Mage" target="_blank">unity3D模型插件资源 MB1 Mage</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37116" title="unity3D模型插件资源 HerdSim 1.3.0" target="_blank">unity3D模型插件资源 HerdSim 1.3.0</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37115" title="unity3D模型插件资源 Andan 角色" target="_blank">unity3D模型插件资源 Andan 角色</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37114" title="Quick Path 6" target="_blank">Quick Path 6</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37113" title="Auto Writer" target="_blank">Auto Writer</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37112" title="Dialogue System for Unity 1.3.0" target="_blank">Dialogue System for Unity 1.3.0</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37111" title="Vehicle 2D Physics Kit 1.5" target="_blank">Vehicle 2D Physics Kit 1.5</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37110" title="cInput Pro 2.7.5b" target="_blank">cInput Pro 2.7.5b</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37108" title="unity游戏动画控制(状态机)" target="_blank">unity游戏动画控制(状态机)</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37104" title="Unity中的事件系统历史" target="_blank">Unity中的事件系统历史</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37103" title="Unity的应用及三层代码" target="_blank">Unity的应用及三层代码</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37102" title="Unity 3D 动态创建对象，并渲染贴图,动态添加删除脚本" target="_blank">Unity 3D 动态创建对象，并渲染贴图,</a></li></ul>
+</div>
+</div>    </div>
+    <div class="articles">
+      <!-- You can start editing here. -->
+			<!-- If comments are open, but there are no comments. -->
+		<h3 id="comments" style="margin-bottom:10px">零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件：等您坐沙发呢！</h3>
+	 			<div id="respond_box">
+	<div id="respond">
+		<h3>发表评论</h3>	
+		<div class="cancel-comment-reply">
+		<div id="real-avatar">
+			<img alt="" src="http://0.gravatar.com/avatar/?d=monsterid&s=40" class="avatar avatar-40 photo avatar-default" height="40" width="40">	</div>	
+			<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.unitymanual.com/7002.html#respond" style="display:none;">点击这里取消回复。</a></small>
+		</div>
+		    <form action="http://www.unitymanual.com/wp-comments-post.php" method="post" id="commentform">
+      		<div id="comment-author-info">
+		<p>
+			<input type="text" name="author" id="author" class="commenttext" value="" size="22" tabindex="1">
+			<label for="author">昵称 *</label>
+		</p>
+		<p>
+			<input type="text" name="email" id="email" class="commenttext" value="" size="22" tabindex="2">
+			<label for="email">邮箱 * <a id="Get_Gravatar" title="查看如何申请一个自己的Gravatar全球通用头像" target="_blank" href="http://www.unitymanual.com/">（教你设置自己的个性头像）</a></label>
+		</p>
+		<p>
+			<input type="text" name="url" id="url" class="commenttext" value="" size="22" tabindex="3">
+			<label for="url">网址</label>
+		</p>
+	</div>
+      		<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+      <div class="clear"></div>
+            <p><script type="text/javascript">
+/* <![CDATA[ */
+    function grin(tag) {
+    	var myField;
+    	tag = ' ' + tag + ' ';
+        if (document.getElementById('comment') && document.getElementById('comment').type == 'textarea') {
+    		myField = document.getElementById('comment');
+    	} else {
+    		return false;
+    	}
+    	if (document.selection) {
+    		myField.focus();
+    		sel = document.selection.createRange();
+    		sel.text = tag;
+    		myField.focus();
+    	}
+    	else if (myField.selectionStart || myField.selectionStart == '0') {
+    		var startPos = myField.selectionStart;
+    		var endPos = myField.selectionEnd;
+    		var cursorPos = endPos;
+    		myField.value = myField.value.substring(0, startPos)
+    					  + tag
+    					  + myField.value.substring(endPos, myField.value.length);
+    		cursorPos += tag.length;
+    		myField.focus();
+    		myField.selectionStart = cursorPos;
+    		myField.selectionEnd = cursorPos;
+    	}
+    	else {
+    		myField.value += tag;
+    		myField.focus();
+    	}
+    }
+/* ]]> */
+</script>
+<a href="javascript:grin(':?:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_question.gif" alt=""></a>
+<a href="javascript:grin(':razz:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_razz.gif" alt=""></a>
+<a href="javascript:grin(':sad:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_sad.gif" alt=""></a>
+<a href="javascript:grin(':smile:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_smile.gif" alt=""></a>
+<a href="javascript:grin(':oops:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_redface.gif" alt=""></a>
+<a href="javascript:grin(':grin:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_biggrin.gif" alt=""></a>
+<a href="javascript:grin(':eek:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_surprised.gif" alt=""></a>
+<a href="javascript:grin(':shock:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_eek.gif" alt=""></a>
+<a href="javascript:grin(':???:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_confused.gif" alt=""></a>
+<a href="javascript:grin(':cool:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_cool.gif" alt=""></a>
+<a href="javascript:grin(':lol:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_lol.gif" alt=""></a>
+<a href="javascript:grin(':mad:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_mad.gif" alt=""></a>
+<a href="javascript:grin(':roll:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_rolleyes.gif" alt=""></a>
+<a href="javascript:grin(':wink:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_wink.gif" alt=""></a>
+<a href="javascript:grin(':neutral:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_neutral.gif" alt=""></a>
+<a href="javascript:grin(':cry:')"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/icon_cry.gif" alt=""></a>
+<br></p>
+      		<p><textarea name="comment" id="comment" tabindex="4" cols="50" rows="5"></textarea></p>
+		<p>
+			<input class="submit" name="submit" type="submit" id="submit" tabindex="5" value="提交留言">
+			<input class="reset" name="reset" type="reset" id="reset" tabindex="6" value="重写">
+			<input type="hidden" name="comment_post_ID" value="7002" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+		</p>
+		<script type="text/javascript">	//Crel+Enter
+		//<![CDATA[
+			jQuery(document).keypress(function(e){
+				if(e.ctrlKey && e.which == 13 || e.which == 10) { 
+					jQuery(".submit").click();
+					document.body.focus();
+				} else if (e.shiftKey && e.which==13 || e.which == 10) {
+					jQuery(".submit").click();
+				}          
+			})
+		// ]]>
+		</script>
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="156f18396d"></p>		<span style="padding:0 0 2px 8px">快捷键：Ctrl+Enter</span>
+    </form>
+	<div class="clear"></div>
+      </div>
+  </div>
+      </div>
+      </div>
+  <div id="sidebar"> 
+
+<div class="widget clearfix">
+<h3 class="clearfix"><span class="more fr"><a target="_blank" href="http://www.unitymanual.com/topic/index.html" title="回顾以往专题">More</a></span>本期专题</h3>
+<a href="http://www.unitymanual.com/http://www.unitymanual.com/topic/source/index.html" target="_blank" class="ztImg"><img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/source.jpg" width="260" height="126" title="Unity小作品游戏精选推荐（部分作品含源代码）" alt="Unity小作品游戏精选推荐（部分作品含源代码）"></a>
+<ul>
+	<li><a href="http://www.unitymanual.com/topic/ngui/index.html" target="_blank" title="NGUI：Asset Store最火爆的UI插件">NGUI：Asset Store最火爆的UI插件</a></li>
+	<li><a href="http://www.unitymanual.com/topic/rz/index.html" target="_blank" title="Unity2013年度国际认证考试 ">Unity2013年度国际认证考试</a></li>
+	<li><a href="http://www.unitymanual.com/topic/rz/index.html" target="_blank" title="Unity应用能力及专业能力测试试题">Unity应用能力及专业能力测试试题</a></li>
+</ul>
+</div>
+  <div class="widget clearfix">
+  <h3>社区新帖</h3>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/api(1).php"></script><div class="module cl xl xl1">
+<ul><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37121" title="unity3D模型插件资源 idol horn" target="_blank">unity3D模型插件资源 idol horn</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37120" title="unity3D模型插件资源 Big Smith" target="_blank">unity3D模型插件资源 Big Smith</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37119" title="unity3D模型Top-Down Apocalyptic World Volume 1 - Town" target="_blank">unity3D模型Top-Down Apocalyptic Wor</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37118" title="unity3D模型插件资源  Scarred Knight" target="_blank">unity3D模型插件资源  Scarred Knight</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37117" title="unity3D模型插件资源 MB1 Mage" target="_blank">unity3D模型插件资源 MB1 Mage</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37116" title="unity3D模型插件资源 HerdSim 1.3.0" target="_blank">unity3D模型插件资源 HerdSim 1.3.0</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37115" title="unity3D模型插件资源 Andan 角色" target="_blank">unity3D模型插件资源 Andan 角色</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37114" title="Quick Path 6" target="_blank">Quick Path 6</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37113" title="Auto Writer" target="_blank">Auto Writer</a></li><li><a href="http://www.unitymanual.com/forum.php?mod=viewthread&tid=37112" title="Dialogue System for Unity 1.3.0" target="_blank">Dialogue System for Unity 1.3.0</a></li></ul>
+</div>
+  </div>
+   <div class="widget clearfix">
+  <h3>最新日志</h3>
+<ul>					<li><a href="http://www.unitymanual.com/7906.html" rel="bookmark" title="详细阅读 Unity调用PC摄像头">Unity调用PC摄像头</a></li>
+										<li><a href="http://www.unitymanual.com/7901.html" rel="bookmark" title="详细阅读 Unity携手微软:为开发商提供3万美元奖励！">Unity携手微软:为开发商提供3万美元奖励</a></li>
+										<li><a href="http://www.unitymanual.com/7897.html" rel="bookmark" title="详细阅读 函数执行顺序">函数执行顺序</a></li>
+										<li><a href="http://www.unitymanual.com/7893.html" rel="bookmark" title="详细阅读 Unity3D教程：用ScriptableObject打包数据">Unity3D教程：用ScriptableObject打</a></li>
+										<li><a href="http://www.unitymanual.com/7775.html" rel="bookmark" title="详细阅读 Unity3D读取Csv文件">Unity3D读取Csv文件</a></li>
+					</ul>
+  </div>
+<img src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/guanggao.jpg" width="260" height="155">
+  <div class="widget clearfix">
+    <h3>分类目录</h3>
+    <div class="sidebar-categories">
+      <div class="sidebar-categories li">
+        <ul>
+          	<li class="cat-item cat-item-141"><a href="http://www.unitymanual.com/category/unity3d_class" title="Unity3D培训课：为你提供诸多免费英宝通Unity3D公开课，Unity3D 4.0公开课。 为你的Unity3D学习，Unity3D培训奠定坚实基础！">Unity3D培训课</a> (85)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.unitymanual.com/category/script" title="Unity3D脚本大全,可快速提高开发效率，中国最大的Unity3D免费脚本代码网站，是您学习Unity3D首选网站。">Unity3D脚本/插件</a> (470)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.unitymanual.com/category/news" title="Unity3D资讯频道，提供最新的、最热的Unity3D信息，，是您了解Unity3D资讯的首选网站。&quot;">Unity3D资讯</a> (114)
+</li>
+	<li class="cat-item cat-item-65"><a href="http://www.unitymanual.com/category/manual" title="免费Unity3D教程包含：Unity3D教程,各种Unity3d教程包括各种Unity3D图文教程、Unity3D视频教程、国内外Unity3D教程。">免费Unity3D教程</a> (595)
+<ul class="children">
+	<li class="cat-item cat-item-129"><a href="http://www.unitymanual.com/category/manual/pro3d%E6%B8%B8%E6%88%8F%E5%88%B6%E4%BD%9C%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B" title="查看 PRO3D游戏制作系列教程 下的所有文章">PRO3D游戏制作系列教程</a> (5)
+</li>
+	<li class="cat-item cat-item-82"><a href="http://www.unitymanual.com/category/manual/unity3d-%E5%9D%A6%E5%85%8B%E5%A4%A7%E6%88%98%E4%B8%AD%E6%96%87%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B" title="查看 Unity3D 坦克大战中文系列教程 下的所有文章">Unity3D 坦克大战中文系列教程</a> (6)
+</li>
+	<li class="cat-item cat-item-75"><a href="http://www.unitymanual.com/category/manual/unity3d-%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B" title="查看 Unity3D 基础教程 下的所有文章">Unity3D 基础教程</a> (492)
+</li>
+	<li class="cat-item cat-item-64"><a href="http://www.unitymanual.com/category/manual/unity3d-%E6%98%9F%E9%99%85%E5%A4%A7%E6%88%98%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B" title="Unity3D 星际大战系列教程，Unity3D 星际大战详细讲解。">Unity3D 星际大战系列教程</a> (28)
+</li>
+	<li class="cat-item cat-item-119"><a href="http://www.unitymanual.com/category/manual/unity3d-%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C" title="查看 Unity3D 软件操作 下的所有文章">Unity3D 软件操作</a> (50)
+</li>
+	<li class="cat-item cat-item-438"><a href="http://www.unitymanual.com/category/manual/unity3d%E4%BD%9C%E5%93%81%E6%AC%A3%E8%B5%8F" title="查看 Unity3D作品欣赏 下的所有文章">Unity3D作品欣赏</a> (4)
+</li>
+	<li class="cat-item cat-item-619"><a href="http://www.unitymanual.com/category/manual/unity3d%E8%8F%9C%E9%B8%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0" title="查看 Unity3D菜鸟学习笔记 下的所有文章">Unity3D菜鸟学习笔记</a> (3)
+</li>
+	<li class="cat-item cat-item-192"><a href="http://www.unitymanual.com/category/manual/unity4-0%E7%95%8C%E9%9D%A2%E4%BB%8B%E7%BB%8D" title="Unity4.0基础教程 界面介绍">Unity4.0界面介绍</a> (6)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-794"><a href="http://www.unitymanual.com/http://www.unitymanual.com/forum-tutorials-1.html" title="零基础Unity3d 游戏开发。">零基础Unity3D游戏开发系列</a> (69)
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+      
+  
+ 
+
+<div class="widget clearfix">
+    <h3>标签云集</h3>	
+<div class="tagBody"><a href="http://www.unitymanual.com/tag/unity3d%E5%BC%95%E6%93%8E" class="tag-link-45" title="30 个话题" style="color:#8def19;font-size: 14.278846153846px;;">Unity3D引擎</a>
+<a href="http://www.unitymanual.com/tag/mecanim%E4%BD%BF%E7%94%A8" class="tag-link-1047" title="8 个话题" style="color:#bd2828;font-size: 12.721153846154px;;">Mecanim使用</a>
+<a href="http://www.unitymanual.com/tag/json" class="tag-link-311" title="6 个话题" style="color:#bed142;font-size: 12.432692307692px;;">json</a>
+<a href="http://www.unitymanual.com/tag/%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F" class="tag-link-641" title="10 个话题" style="color:#3db0cd;font-size: 12.980769230769px;;">粒子系统</a>
+<a href="http://www.unitymanual.com/tag/unity4-0%E5%85%AC%E5%BC%80%E8%AF%BE" class="tag-link-142" title="75 个话题" style="color:#c8613b;font-size: 15.403846153846px;;">Unity4.0公开课</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E6%8F%92%E4%BB%B6" class="tag-link-174" title="16 个话题" style="color:#76e328;font-size: 13.528846153846px;;">Unity3D插件</a>
+<a href="http://www.unitymanual.com/tag/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" class="tag-link-434" title="7 个话题" style="color:#1cd66b;font-size: 12.576923076923px;;">性能优化</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E6%95%99%E7%A8%8B" class="tag-link-72" title="532 个话题" style="color:#b82bf0;font-size: 17.855769230769px;;">Unity3D教程</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E5%9F%B9%E8%AE%AD" class="tag-link-787" title="15 个话题" style="color:#033b82;font-size: 13.442307692308px;;">Unity3D培训</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E9%A1%B5%E6%B8%B8" class="tag-link-43" title="16 个话题" style="color:#90b5e2;font-size: 13.528846153846px;;">Unity3D页游</a>
+<a href="http://www.unitymanual.com/tag/ngui" class="tag-link-991" title="12 个话题" style="color:#1869d4;font-size: 13.182692307692px;;">NGUI</a>
+<a href="http://www.unitymanual.com/tag/unity" class="tag-link-5" title="81 个话题" style="color:#a3692c;font-size: 15.490384615385px;;">Unity</a>
+<a href="http://www.unitymanual.com/tag/ezgui" class="tag-link-261" title="7 个话题" style="color:#bb3a81;font-size: 12.576923076923px;;">EZGUI</a>
+<a href="http://www.unitymanual.com/tag/%E6%96%B0%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A0online" class="tag-link-47" title="13 个话题" style="color:#13c26d;font-size: 13.298076923077px;;">新仙剑奇侠传Online</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E4%BB%A3%E7%A0%81" class="tag-link-52" title="207 个话题" style="color:#e196fc;font-size: 16.673076923077px;;">Unity3D代码</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E8%84%9A%E6%9C%AC" class="tag-link-51" title="603 个话题" style="color:#cafbbb;font-size: 18px;;">Unity3D脚本</a>
+<a href="http://www.unitymanual.com/tag/c" class="tag-link-212" title="14 个话题" style="color:#fa494c;font-size: 13.384615384615px;;">C#</a>
+<a href="http://www.unitymanual.com/tag/pro3d%E6%95%99%E7%A8%8B" class="tag-link-125" title="5 个话题" style="color:#64985e;font-size: 12.230769230769px;;">PRO3D教程</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91" class="tag-link-796" title="69 个话题" style="color:#e2f5e4;font-size: 15.317307692308px;;">Unity3D游戏开发</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E8%B5%84%E8%AE%AF" class="tag-link-702" title="18 个话题" style="color:#88c632;font-size: 13.673076923077px;;">Unity3D资讯</a>
+<a href="http://www.unitymanual.com/tag/webplayer" class="tag-link-225" title="5 个话题" style="color:#fa64c5;font-size: 12.230769230769px;;">webplayer</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E5%85%8D%E8%B4%B9%E6%95%99%E7%A8%8B" class="tag-link-73" title="211 个话题" style="color:#e1985d;font-size: 16.701923076923px;;">Unity3D免费教程</a>
+<a href="http://www.unitymanual.com/tag/unity3d" class="tag-link-8" title="176 个话题" style="color:#6cea2b;font-size: 16.471153846154px;;">Unity3D</a>
+<a href="http://www.unitymanual.com/tag/%E8%92%B8%E6%B1%BD%E4%B9%8B%E5%9F%8E" class="tag-link-747" title="6 个话题" style="color:#3beab8;font-size: 12.432692307692px;;">蒸汽之城</a>
+<a href="http://www.unitymanual.com/tag/%E5%9D%A6%E5%85%8B%E5%A4%A7%E6%88%98%E6%95%99%E7%A8%8B" class="tag-link-83" title="6 个话题" style="color:#788b72;font-size: 12.432692307692px;;">坦克大战教程</a>
+<a href="http://www.unitymanual.com/tag/%E5%A4%A9%E7%A5%9E%E4%BC%A0" class="tag-link-57" title="4 个话题" style="color:#8c82c5;font-size: 12px;;">天神传</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E8%A7%86%E9%A2%91" class="tag-link-74" title="25 个话题" style="color:#bddb77;font-size: 14.048076923077px;;">Unity3D视频</a>
+<a href="http://www.unitymanual.com/tag/itween" class="tag-link-179" title="4 个话题" style="color:#a7f463;font-size: 12px;;">iTween</a>
+<a href="http://www.unitymanual.com/tag/gameobject" class="tag-link-260" title="5 个话题" style="color:#04a27c;font-size: 12.230769230769px;;">GameObject</a>
+<a href="http://www.unitymanual.com/tag/%E6%98%9F%E6%88%98%E6%B8%B8%E6%88%8F%E6%95%99%E7%A8%8B" class="tag-link-77" title="25 个话题" style="color:#e6f30a;font-size: 14.048076923077px;;">星战游戏教程</a>
+<a href="http://www.unitymanual.com/tag/%E6%96%B0%E4%BB%99%E5%89%91" class="tag-link-42" title="18 个话题" style="color:#ff0302;font-size: 13.673076923077px;;">新仙剑</a>
+<a href="http://www.unitymanual.com/tag/unity3d4-0%E6%95%99%E7%A8%8B" class="tag-link-76" title="356 个话题" style="color:#5790df;font-size: 17.336538461538px;;">Unity3D4.0教程</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E6%B8%B8%E6%88%8F" class="tag-link-46" title="38 个话题" style="color:#c99a8a;font-size: 14.567307692308px;;">Unity3D游戏</a>
+<a href="http://www.unitymanual.com/tag/unity%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B" class="tag-link-941" title="21 个话题" style="color:#2b6bd9;font-size: 13.846153846154px;;">Unity脚本编程</a>
+<a href="http://www.unitymanual.com/tag/%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E" class="tag-link-1210" title="9 个话题" style="color:#34c344;font-size: 12.865384615385px;;">物理引擎</a>
+<a href="http://www.unitymanual.com/tag/unity4-0" class="tag-link-6" title="75 个话题" style="color:#13aeb1;font-size: 15.403846153846px;;">Unity4.0</a>
+<a href="http://www.unitymanual.com/tag/%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B" class="tag-link-84" title="6 个话题" style="color:#5c0fb8;font-size: 12.432692307692px;;">中文教程</a>
+<a href="http://www.unitymanual.com/tag/shader" class="tag-link-264" title="4 个话题" style="color:#eb4aff;font-size: 12px;;">Shader</a>
+<a href="http://www.unitymanual.com/tag/%E6%BA%90%E4%BB%A3%E7%A0%81" class="tag-link-397" title="6 个话题" style="color:#6be7cf;font-size: 12.432692307692px;;">源代码</a>
+<a href="http://www.unitymanual.com/tag/%E5%85%8D%E8%B4%B9%E8%84%9A%E6%9C%AC" class="tag-link-455" title="5 个话题" style="color:#7133d8;font-size: 12.230769230769px;;">免费脚本</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E" class="tag-link-195" title="4 个话题" style="color:#005c97;font-size: 12px;;">Unity3D游戏引擎</a>
+<a href="http://www.unitymanual.com/tag/%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA" class="tag-link-1101" title="10 个话题" style="color:#26dd58;font-size: 12.980769230769px;;">游戏资源导入导出</a>
+<a href="http://www.unitymanual.com/tag/assetbundle" class="tag-link-155" title="5 个话题" style="color:#e15639;font-size: 12.230769230769px;;">AssetBundle</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E6%89%8B%E6%B8%B8" class="tag-link-70" title="14 个话题" style="color:#182c03;font-size: 13.384615384615px;;">Unity3D手游</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E5%9F%B9%E8%AE%AD%E8%AF%BE" class="tag-link-922" title="19 个话题" style="color:#59b0f5;font-size: 13.730769230769px;;">Unity3D培训课</a>
+<a href="http://www.unitymanual.com/tag/%E5%80%92%E8%AE%A1%E6%97%B6" class="tag-link-388" title="5 个话题" style="color:#6916d2;font-size: 12.230769230769px;;">倒计时</a>
+<a href="http://www.unitymanual.com/tag/%E8%8B%B1%E5%AE%9D%E9%80%9A" class="tag-link-136" title="90 个话题" style="color:#0b5b68;font-size: 15.634615384615px;;">英宝通</a>
+<a href="http://www.unitymanual.com/tag/gui" class="tag-link-441" title="17 个话题" style="color:#45752f;font-size: 13.615384615385px;;">GUI</a>
+<a href="http://www.unitymanual.com/tag/unity3d%E5%85%8D%E8%B4%B9%E8%84%9A%E6%9C%AC" class="tag-link-71" title="333 个话题" style="color:#53dd0a;font-size: 17.25px;;">Unity3D免费脚本</a>
+<a href="http://www.unitymanual.com/tag/android" class="tag-link-616" title="6 个话题" style="color:#34aa56;font-size: 12.432692307692px;;">Android</a></div>  </div>
+  <div class="widget clearfix">
+    <div id="tab-title">
+      <h3>热评日志</h3>
+<ul>
+    
+<li><a href="http://www.unitymanual.com/4651.html" rel="bookmark" title="【英宝通Unity4.0公开课】第四十五讲 物理引擎介绍：刚体铰链关节的使用 (2条评论)">【英宝通Unity4.0公开课】第四十五讲 </a></li>
+<li><a href="http://www.unitymanual.com/5345.html" rel="bookmark" title="植物大战僵尸脚本 (2条评论)">植物大战僵尸脚本</a></li>
+<li><a href="http://www.unitymanual.com/5616.html" rel="bookmark" title="零基础Unity3D游戏开发系列 第二章：Unity3D概览（一）创建与打开项目III (2条评论)">零基础Unity3D游戏开发系列 第二章：Un</a></li>
+<li><a href="http://www.unitymanual.com/5839.html" rel="bookmark" title="【英宝通Unity4.0公开课】主讲路老师等坐镇技术论坛！ (2条评论)">【英宝通Unity4.0公开课】主讲路老师等</a></li>
+<li><a href="http://www.unitymanual.com/6681.html" rel="bookmark" title="Unity3D教程：计算机3D图形基础在Unity中的实现 (2条评论)">Unity3D教程：计算机3D图形基础在Unity</a></li>
+<li><a href="http://www.unitymanual.com/5762.html" rel="bookmark" title="DontDestroyOnLoad重复实例化 (1条评论)">DontDestroyOnLoad重复实例化</a></li>
+<li><a href="http://www.unitymanual.com/4821.html" rel="bookmark" title="时间控制 - timeScale (1条评论)">时间控制 - timeScale</a></li>
+<li><a href="http://www.unitymanual.com/4854.html" rel="bookmark" title="Unity3D教程：游戏场景优化（三）Draw call (1条评论)">Unity3D教程：游戏场景优化（三）Draw </a></li>
+<li><a href="http://www.unitymanual.com/4909.html" rel="bookmark" title="《蒸汽之城》中文版 5月9日首次封测！邀请码大派送！ (1条评论)">《蒸汽之城》中文版 5月9日首次封测！</a></li>
+<li><a href="http://www.unitymanual.com/5156.html" rel="bookmark" title="【英宝通Unity4.0公开课】第五十二讲 粒子系统：粒子碰撞、渲染和材质 (1条评论)">【英宝通Unity4.0公开课】第五十二讲 </a></li></ul>
+    </div>
+  </div>
+  
+  
+  
+			<div id="secondary" class="widget-area" role="complementary">
+			<h3>文章</h3>		<ul>
+			<li><a href="http://www.unitymanual.com/date/2013/07" title="2013 年七月">2013 年七月</a>&nbsp;(188)</li>
+	<li><a href="http://www.unitymanual.com/date/2013/06" title="2013 年六月">2013 年六月</a>&nbsp;(179)</li>
+	<li><a href="http://www.unitymanual.com/date/2013/05" title="2013 年五月">2013 年五月</a>&nbsp;(208)</li>
+	<li><a href="http://www.unitymanual.com/date/2013/04" title="2013 年四月">2013 年四月</a>&nbsp;(219)</li>
+	<li><a href="http://www.unitymanual.com/date/2013/03" title="2013 年三月">2013 年三月</a>&nbsp;(199)</li>
+	<li><a href="http://www.unitymanual.com/date/2013/02" title="2013 年二月">2013 年二月</a>&nbsp;(155)</li>
+	<li><a href="http://www.unitymanual.com/date/2013/01" title="2013 年一月">2013 年一月</a>&nbsp;(183)</li>
+		</ul>
+<h3>功能</h3>			<ul>
+						<li><a href="http://www.unitymanual.com/wp-login.html">登录</a></li>
+			<li><a href="http://www.unitymanual.com/feed" title="使用 RSS 2.0 订阅本站点内容">文章 <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.unitymanual.com/comments/feed" title="使用 RSS 订阅本站点的所有文章的近期评论">评论 <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+						</ul>
+		</div><!-- #secondary -->
+		
+</div></div>
+
+
+<div id="footer">Copyright © 2012-2013 <a href="http://www.unitymanual.com/" title="Unity3D教程手册">
+  Unity3D教程手册  </a>. Powered by WordPress
+    . Theme by TearSnow.
+  <div id="foot">
+                <a href="http://www.unitymanual.com/sitemap.html" rel="external">网站地图</a>
+    .                <a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">京ICP备12050435号</a>
+    .            <script src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/stat.php" language="JavaScript"></script><script src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=4924487" target="_blank" title="站长统计">站长统计</a>
+<br>
+版权声明：本网站资源由网友提供来，其他网站严禁转载。最终解释权归本网站所有。
+    .      .      </div>
+</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/www.unitymanual.com\/wp-admin\/admin-ajax.php","text_wait":"\u4f60\u7684\u8bf7\u6c42\u6b63\u5728\u6267\u884c\u4e2d\uff0c\u8bf7\u7a0d\u7b49","text_valid":"\u8bf7\u9009\u62e9\u6709\u6548\u7684\u6295\u7968\u9009\u9879","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/polls-js.js"></script>
+
+
+<!-- Mirrored from www.unitymanual.com/7002.html by HTTrack Website Copier/3.x [XR&CO'2013], Tue, 30 Jul 2013 12:13:42 GMT -->
+
+
+<script src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/wb.js" type="text/javascript" charset="utf-8"></script>	<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="./零基础Unity3D游戏开发系列 第四章：游戏资源导入导出（四）网格fbx模型文件   Unity3D教程手册_files/jia6d21.js" charset="utf-8"></script>
+
+	<!-- JiaThis Button BEGIN --></body></html>
