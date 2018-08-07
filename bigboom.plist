@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://boom.playnb.net/static/patch/apk/game.ipa</string>
+					<string>http://192.168.93.247/ztgj/game.ipa</string>
 				</dict>
                                 <dict>
                                         <key>kind</key>
@@ -19,13 +19,13 @@
                                         <key>needs-shine</key>
                                         <true/>
                                         <key>url</key>
-                                        <string>http://boom.playnb.net/static/icon.png</string>
+                                        <string>http://222.73.243.62/download/ztgj.png</string>
                                 </dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.ztgame.boom</string>
+				<string>com.ztgame.ztzsnew</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
