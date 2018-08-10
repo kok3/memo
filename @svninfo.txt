@@ -1,0 +1,2 @@
+grsm new
+svn://192.168.150.63/timefire/branches/branch_newversion/client/timefire
