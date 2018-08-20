@@ -2,3 +2,7 @@ IT:
 \\192.168.36.170
 jsb?:
 \\192.168.150.238
+
+
+http://cocos2d-x.org/filedown/CocosForMac-v3.10.dmg 1.5k
+http://cocos2d-x.org/filedown/CocosForWin-v3.10.exe 3.6k
